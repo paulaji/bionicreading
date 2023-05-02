@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boldify</title>
+    <script>
+      function boldify() {
+        // Get the input and output elements
+        var input = document.getElementById("input");
+        var output = document.getElementById("output");
+
+        // Split the input into an array of words
+        var words = input.value.split(" ");
+
+        // Boldify the first two letters of each word
+        for (var i = 0; i < words.length; i++) {
+          if (words[i].length >= 2) {
+            words[i] =
+              "<b>" + words[i].substr(0, 2) + "</b>" + words[i].substr(2);
+          }
+        }
+
+        // Join the words back into a string and set it as the output
+        output.innerHTML = words.join(" ");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Boldify</h1>
+    <form>
+      <label for="input">Input:</label><br />
+      <textarea id="input" name="input" rows="5" cols="50"></textarea><br />
+      <button type="button" onclick="boldify()">Boldify</button><br />
+      <label for="output">Output:</label><br />
+      <div id="output"></div>
+    </form>
+  </body>
+</html>
