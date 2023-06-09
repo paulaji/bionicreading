@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Boldify</title>
     <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
       /* Set the font size of the output element */
       #output {
         font-size: 20px;
+      }
+      .credits {
+        display: flex;
+        justify-content: center;
       }
     </style>
     <script>
@@ -31,7 +43,10 @@
     </script>
   </head>
   <body>
-    <h1>Boldify</h1>
+    <div class="maindiv">
+      <small class="credits">credits: paulajiparayil123@gmail.com</small>
+      <h1>Boldify</h1>
+    </div>
     <form>
       <label for="input">Input:</label><br />
       <textarea id="input" name="input" rows="5" cols="50"></textarea><br />
